@@ -1,0 +1,95 @@
+<br />
+<section class="breadcrumb-option">
+  <div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb__text">
+          <h4>Check Out</h4>
+          <div class="breadcrumb__links">
+            <a href="">Home</a>><a href="">Shop</a>><span>Check Out</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br />
+<section class="checkout spad">
+  <div class="">
+    <div class="checkout__form">
+      <form [formGroup]="formOrder" (submit)="save()">
+        <div class="row">
+          <div class="col-lg-7 col-md-6">
+            <h6 class="coupon__code">
+              <span class="icon_tag_alt"></span> Have a coupon?
+              <a href="#">Click here</a> to enter your code
+            </h6>
+            <h6 class="checkout__title">Billing Details</h6>
+            <div class="checkout__input">
+              <p>Full Name<span>*</span></p>
+              <input required formControlName="fullname" type="text" />
+            </div>
+            <div class="checkout__input">
+              <p>Address<span>*</span></p>
+              <input
+                required
+                formControlName="address"
+                type="text"
+                placeholder="Address"
+              />
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="checkout__input">
+                  <p>Phone<span>*</span></p>
+                  <input required formControlName="phone" type="text" />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="checkout__input">
+                  <p>Email<span>*</span></p>
+                  <input required formControlName="email" type="email" />
+                </div>
+              </div>
+            </div>
+            <div class="checkout__input">
+              <p>Order notes<span>*</span></p>
+              <input
+                required
+                formControlName="note"
+                type="text"
+                placeholder="Notes about your order, e.g. special notes for delivery."
+              />
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-6">
+            <div class="checkout__order">
+              <h4 class="order__title">Your order</h4>
+              <div class="checkout__order__products">
+                Product <span>Total</span>
+              </div>
+              <ul class="checkout__total__products" style="padding-left: 0">
+                <div *ngFor="let y of listCart; let i = index">
+                  <li>{{ i + 1 }}. {{ y.product.product_Name }}</li>
+                  <span>
+                    {{ y.count * y.product.price | currency : "VND" }}</span
+                  >
+                </div>
+              </ul>
+              <ul class="checkout__total__all">
+                <li>
+                  Total <span>{{ totalAmount | currency : "VND" }}</span>
+                </li>
+              </ul>
+              <button class="btn-17" type="submit">
+                <span class="text-container">
+                  <span class="text">Buy</span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

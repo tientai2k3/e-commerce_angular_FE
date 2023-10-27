@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Sửa màu sắc</h2>
+  <br />
+  <form class="example-form" [formGroup]="formColor" (submit)="update()">
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input
+        matInput
+        formControlName="color_name"
+        placeholder="Enter color name"
+      />
+    </mat-form-field>
+    <br />
+    <button
+      type="submit"
+      [disabled]="!formColor.valid"
+      mat-raised-button
+      color="warn"
+    >
+      Update
+    </button>
+  </form>
+</div>

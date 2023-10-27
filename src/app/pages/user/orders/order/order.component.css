@@ -1,0 +1,483 @@
+.coupon__code {
+  color: #0d0d0d;
+  font-size: 14px;
+  border-top: 2px solid #77b527;
+  background: #f5f5f5;
+  padding: 23px 30px 18px;
+  margin-bottom: 50px;
+}
+
+.coupon__code span {
+  margin-right: 15px;
+}
+
+.coupon__code a {
+  color: #0d0d0d;
+}
+
+.checkout__title {
+  color: #111111;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+}
+
+.checkout__input {
+  margin-bottom: 6px;
+}
+
+.checkout__input p {
+  color: #111111;
+  margin-bottom: 12px;
+}
+
+.checkout__input p span {
+  color: #e53637;
+}
+
+.checkout__input input {
+  height: 50px;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  font-size: 14px;
+  color: #b7b7b7;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.checkout__input input::-webkit-input-placeholder {
+  color: #b7b7b7;
+}
+
+.checkout__input input::-moz-placeholder {
+  color: #b7b7b7;
+}
+
+.checkout__input input:-ms-input-placeholder {
+  color: #b7b7b7;
+}
+
+.checkout__input input::-ms-input-placeholder {
+  color: #b7b7b7;
+}
+
+.checkout__input input::placeholder {
+  color: #b7b7b7;
+}
+
+.checkout__input__checkbox label {
+  font-size: 15px;
+  color: #0d0d0d;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.checkout__input__checkbox label input {
+  position: absolute;
+  visibility: hidden;
+}
+
+.checkout__input__checkbox label input:checked ~ .checkmark {
+  border-color: #e53637;
+}
+
+.checkout__input__checkbox label input:checked ~ .checkmark:after {
+  opacity: 1;
+}
+
+.checkout__input__checkbox label .checkmark {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  height: 14px;
+  width: 14px;
+  border: 1.5px solid #d7d7d7;
+  content: "";
+  border-radius: 2px;
+}
+
+.checkout__input__checkbox label .checkmark:after {
+  position: absolute;
+  left: 1px;
+  top: -3px;
+  width: 14px;
+  height: 7px;
+  border: solid #e53637;
+  border-width: 1.5px 1.5px 0px 0px;
+  -webkit-transform: rotate(127deg);
+  -ms-transform: rotate(127deg);
+  transform: rotate(127deg);
+  content: "";
+  opacity: 0;
+}
+
+.checkout__input__checkbox p {
+  color: #0d0d0d;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 22px;
+}
+
+.checkout__order {
+  background: #f3f2ee;
+  padding: 25px;
+}
+
+.checkout__order .order__title {
+  color: #111111;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 1px solid #d7d7d7;
+  padding-bottom: 25px;
+}
+
+.checkout__order p {
+  color: #444444;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.checkout__order .site-btn {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.checkout__order__products {
+  font-size: 16px;
+  color: #111111;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.checkout__order__products span {
+  float: right;
+}
+
+.checkout__total__products {
+  margin-bottom: 20px;
+}
+
+.checkout__total__products div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout__total__products li {
+  font-size: 14px;
+  color: #444444;
+  list-style: none;
+  line-height: 26px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.checkout__total__products li:last-child {
+  margin-bottom: 0;
+}
+
+.checkout__total__products span {
+  color: #e53637;
+  float: right;
+  font-size: 14px;
+  list-style: none;
+  line-height: 26px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.checkout__total__all {
+  border-top: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
+  padding: 15px 0;
+  margin-bottom: 26px;
+}
+
+.checkout__total__all li {
+  list-style: none;
+  font-size: 16px;
+  color: #111111;
+  line-height: 40px;
+  overflow: hidden;
+}
+
+.checkout__total__all li span {
+  color: #e53637;
+  font-weight: 700;
+  float: right;
+}
+.breadcrumb-option {
+  background: #f3f2ee;
+  padding: 40px 0;
+}
+
+.breadcrumb__text h4 {
+  margin-left: 30px;
+  color: #111111;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.breadcrumb__links {
+  margin-left: 30px;
+}
+
+.breadcrumb__links a {
+  font-size: 15px;
+  color: #111111;
+  /* margin-right: 18px; */
+  display: inline-block;
+  position: relative;
+}
+
+.breadcrumb__links a:after {
+  position: absolute;
+  right: -14px;
+  top: 0;
+  font-family: "FontAwesome";
+}
+
+.breadcrumb__links span {
+  font-size: 15px;
+  color: #b7b7b7;
+  display: inline-block;
+}
+.breadcrumb-option a {
+  text-decoration: none;
+  /* padding-left: 30px; */
+}
+
+.button {
+  --width: 100px;
+  --height: 35px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #222;
+  --tooltip-color: #fff;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: relative;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: background 0.3s;
+}
+
+.button::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: #555;
+  font-size: 0.9rem;
+  color: #fff;
+  border-radius: 0.25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #555;
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button::after,
+.button::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-wrapper,
+.text,
+.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0;
+}
+
+.text,
+.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.btn-17,
+.btn-17 *,
+.btn-17 :after,
+.btn-17 :before,
+.btn-17:after,
+.btn-17:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-17 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.btn-17:disabled {
+  cursor: default;
+}
+
+.btn-17:-moz-focusring {
+  outline: auto;
+}
+
+.btn-17 svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.btn-17 [hidden] {
+  display: none;
+}
+
+.btn-17 {
+  margin-left: 80px;
+
+  border-radius: 99rem;
+  border-width: 2px;
+  padding: 0.8rem 3rem;
+  z-index: 0;
+}
+
+.btn-17,
+.btn-17 .text-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-17 .text-container {
+  display: block;
+  mix-blend-mode: difference;
+}
+
+.btn-17 .text {
+  display: block;
+  position: relative;
+}
+
+.btn-17:hover .text {
+  -webkit-animation: move-up-alternate 0.3s forwards;
+  animation: move-up-alternate 0.3s forwards;
+}
+
+@-webkit-keyframes move-up-alternate {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(80%);
+  }
+
+  51% {
+    transform: translateY(-80%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes move-up-alternate {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(80%);
+  }
+
+  51% {
+    transform: translateY(-80%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.btn-17:after,
+.btn-17:before {
+  --skew: 0.2;
+  background: #fff;
+  content: "";
+  display: block;
+  height: 102%;
+  left: calc(-50% - 50% * var(--skew));
+  pointer-events: none;
+  position: absolute;
+  top: -104%;
+  transform: skew(calc(150deg * var(--skew))) translateY(var(--progress, 0));
+  transition: transform 0.2s ease;
+  width: 100%;
+}
+
+.btn-17:after {
+  --progress: 0%;
+  left: calc(50% + 50% * var(--skew));
+  top: 102%;
+  z-index: -1;
+}
+
+.btn-17:hover:before {
+  --progress: 100%;
+}
+
+.btn-17:hover:after {
+  --progress: -102%;
+}

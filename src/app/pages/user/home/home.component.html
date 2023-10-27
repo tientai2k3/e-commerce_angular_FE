@@ -1,0 +1,108 @@
+<br />
+<div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="https://file.hstatic.net/1000230642/file/top_banner__1__a228a843946e44ad9a256e9caf3917b7.jpg"
+        class="d-block w-100"
+        alt="..."
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://file.hstatic.net/1000230642/file/1920x750_gosto_bb0795caa61e4ba5bbf8abbbc047d172.jpg"
+        class="d-block w-100"
+        alt="..."
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://file.hstatic.net/1000230642/file/1920x750_hunter_junior_efec6325ab764c66baad7983c098f7b3.jpg"
+        class="d-block w-100"
+        alt="..."
+      />
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="text-center py-5">
+  <h4 class="mt-4 mb-5"><strong>New Products</strong></h4>
+
+  <div class="row">
+    <div class="col-lg-3 col-md-12 mb-3" *ngFor="let x of listProduct">
+      <div class="card">
+        <div
+          class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+          data-mdb-ripple-color="light"
+        >
+          <img src="{{ x.image }}" class="w-100" />
+          <a routerLink="/shop/{{ x.id }}">
+            <div class="mask">
+              <div class="d-flex justify-content-start align-items-end h-100">
+                <h5><span class="badge bg-primary ms-2">New</span></h5>
+              </div>
+            </div>
+            <div class="hover-overlay">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.15)"
+              ></div>
+            </div>
+          </a>
+        </div>
+        <div class="card-body">
+          <a routerLink="/shop/{{ x.id }}" class="text-reset">
+            <h5 class="card-title mb-3">
+              {{ x.category.category_Name }} || {{ x.color.color_name }}
+            </h5>
+          </a>
+          <a routerLink="/shop/{{ x.id }}" class="text-reset">
+            <p>{{ x.product_Name }}</p>
+          </a>
+          <h5 class="mb-3">{{ x.price | currency : "VND" }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br />

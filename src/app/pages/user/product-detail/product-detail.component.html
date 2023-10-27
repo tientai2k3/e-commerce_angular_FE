@@ -1,0 +1,101 @@
+<br />
+<div class="container">
+  <br />
+  <br />
+  <div class="row">
+    <div class="col-md-6">
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{ product.image }}" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <form class="example-form" [formGroup]="formCart" (submit)="save()">
+        <div class="noidung">
+          <h2>{{ product.product_Name }}</h2>
+          <p class="date">
+            Ngày nhập: {{ product.created_At | date : "MM/dd/yyyy 'at' h:mma" }}
+          </p>
+          <br />
+          <p class="txtGia">{{ product.price | currency : "VND" : " đ " }}</p>
+
+          <div class="khuyenmai">
+            <b>Mô tả sản phẩm</b><br />
+            {{ product.description }}
+          </div>
+          <p class="txtSoluong">
+            Tình trạng :
+            <span
+              ><b>Còn hàng [{{ product.quantity }}]</b></span
+            >
+          </p>
+          <p class="kichThuoc">Kích Thước :Free Size</p>
+          <br />
+          <div class="form-outline">
+            <input
+              type="number"
+              id="typeNumber"
+              class="form-control"
+              placeholder="Số lượng"
+              style="width: 30%"
+              min="1"
+              required
+              formControlName="count"
+            />
+          </div>
+          <br />
+          <br />
+          <br />
+          <div class="row">
+            <div class="col-md-6">
+              <button
+                type="button"
+                style="width: 100%; height: 50px"
+                class="btn btn-outline-info"
+              >
+                MUA NGAY
+              </button>
+            </div>
+            <div class="col-md-6">
+              <button
+                type="submit"
+                style="width: 100%; height: 50px"
+                class="btn btn-outline-info"
+              >
+                THÊM VÀO GIỎ
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <br />
+</div>
+
+<br />

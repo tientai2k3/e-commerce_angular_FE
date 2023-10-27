@@ -1,0 +1,43 @@
+/*==Reset CSS==*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*==Style cơ bản cho website==*/
+body {
+  font-family: sans-serif;
+  color: #333;
+}
+
+/*==Style cho menu===*/
+#menu ul {
+  background: black;
+  list-style-type: none;
+  text-align: center;
+}
+#menu li {
+  color: #f1f1f1;
+  display: inline-block;
+  width: 120px;
+  height: 60px;
+  line-height: 60px;
+  margin-left: -5px;
+}
+#menu a {
+  font-size: 17px;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+#menu .cart > a:hover {
+  background-color: black;
+}
+#menu a:hover {
+  background: #f1f1f1;
+  color: #333;
+}
+#menu .cart > a:hover {
+  background-color: black;
+  color: white;
+}

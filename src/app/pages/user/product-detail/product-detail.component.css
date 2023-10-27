@@ -1,0 +1,232 @@
+.card {
+  border: 0;
+}
+.nav-item {
+  margin-right: 40px;
+}
+footer {
+  margin-top: 100px;
+  height: 420px;
+  background-color: #f3f6fa;
+}
+.diachi li {
+  font-size: 16px;
+  color: #1c1c1c;
+  line-height: 37px;
+  list-style: none;
+}
+.footer__about h5 {
+  color: #1c1c1c;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.footer__about ul {
+  width: 50%;
+  float: left;
+}
+.footer__about ul li {
+  list-style: none;
+  line-height: 37px;
+}
+.footer__about ul li a {
+  color: #1c1c1c;
+  font-size: 16px;
+  line-height: 32px;
+  text-decoration: none;
+}
+.footer__email h5 {
+  color: #1c1c1c;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.footer__email p {
+  font-size: 16px;
+  color: #1c1c1c;
+  margin-bottom: 30px;
+}
+.footer__email .form {
+  margin-bottom: 30px;
+  display: flex;
+}
+.footer__email .form input {
+  width: 70%;
+  font-size: 16px;
+  padding-left: 20px;
+  color: #1c1c1c;
+  height: 55px;
+  border: 1px solid #ededed;
+  font-family: inherit;
+}
+.form > .btn {
+  width: 35%;
+  font-size: 16px;
+  color: black;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 13px 15px 12px;
+  background: #7fad39;
+  border: none;
+  border-radius: 0%;
+}
+.footer__email .logo a {
+  display: inline-block;
+  height: 41px;
+  width: 41px;
+  font-size: 16px;
+  color: #404040;
+  border: 1px solid #ededed;
+  border-radius: 50%;
+  line-height: 38px;
+  text-align: center;
+  background: #ffffff;
+  -webkit-transition: all, 0.3s;
+  -moz-transition: all, 0.3s;
+  -ms-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  transition: all, 0.3s;
+  margin-right: 10px;
+}
+.footer__email .logo a:hover {
+  background-color: #7fad39;
+  color: white;
+}
+.footer__about > h5 {
+  margin-left: 30px;
+}
+.foo {
+  padding-top: 85px;
+}
+.anh {
+  padding-left: 30px;
+}
+.nav-item a {
+  font-weight: 500;
+}
+.nav-item a:hover {
+  color: #51a37d;
+}
+.li li {
+  list-style: none;
+}
+.align-items-center a {
+  font-size: 17px;
+}
+.align-items-center i:hover {
+  color: #51a37d;
+}
+.footer__about li a:hover {
+  color: #51a37d;
+}
+.card img {
+  max-width: 70%;
+  margin: auto;
+}
+.card {
+  border: 1px solid #c5c5c5;
+  border-radius: 0;
+  margin-bottom: 25px;
+}
+.card-title a {
+  text-decoration: none;
+  color: #353535;
+}
+
+.card-text {
+  font-weight: 600;
+  font-size: 17px;
+  color: #468d71;
+}
+.btn-outline-success {
+  margin: 6px 78px;
+}
+.card-title a:hover {
+  color: #468d71;
+  font-weight: 600;
+}
+hr {
+  background-color: gray;
+  height: 3px;
+  font-weight: 400;
+  border: 0;
+}
+.btn-outline-success {
+  margin: 0 10px;
+}
+.card-body > .btn-outline-success {
+  margin: 6px 60px;
+}
+#dropdownMenuButton {
+  width: 250px;
+  background-color: #7fad39;
+}
+.dropdown-menu {
+  width: 245px;
+}
+.dropdown-menu > li > a:hover {
+  background-color: #7fad39;
+  color: white;
+}
+.list-group-light a:hover {
+  background-color: #7fad39;
+  color: white;
+}
+.titleContact {
+  color: gray;
+}
+.ndContact {
+  font-weight: 500;
+}
+.loiTxt {
+  color: red;
+  font-size: 15px;
+  font-style: italic;
+}
+.txtTheLoai {
+  margin: 0;
+  font-size: 14px;
+  font-style: italic;
+  color: orange;
+}
+.noidung {
+  margin-left: 15px;
+}
+.date {
+  margin: 0;
+  font-size: 14px;
+  font-style: italic;
+  color: orange;
+}
+.txtGia {
+  font-size: 23px;
+  color: red;
+  font-weight: 400;
+  margin-left: 15px;
+}
+.khuyenmai {
+  margin-left: 20px;
+  font-size: 15px;
+  font-style: italic;
+  border: 1px solid yellow;
+  padding: 10px;
+  border-radius: 10px;
+}
+.khuyenmai > b {
+  font-size: 16px;
+}
+.txtSoluong {
+  margin-top: 15px;
+  font-size: 15px;
+}
+.txtSoluong > span {
+  color: #4e76b5;
+}
+.kichThuoc {
+  margin: 0;
+  font-size: 14px;
+  font-style: italic;
+  color: green;
+}
+.rowFlex-gallery {
+  display: flex;
+}

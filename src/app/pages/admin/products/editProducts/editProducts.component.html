@@ -1,0 +1,101 @@
+<div class="container">
+  <h2>Thêm sản phẩm</h2>
+  <br />
+  <form
+    class="example-form"
+    [formGroup]="formProducts"
+    (submit)="update()"
+    enctype="multipart/form-data"
+  >
+    <div class="row">
+      <div class="mb-3">
+        <label class="form-label">Product Code</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="product_Code"
+          required
+          placeholder="Enter product code"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Product name</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="product_Name"
+          required
+          placeholder="Enter product name"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Product Description</label>
+        <input
+          type="text"
+          class="form-control"
+          required
+          formControlName="description"
+          placeholder="Enter product description"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Product Price</label>
+        <input
+          type="number"
+          class="form-control"
+          required
+          formControlName="price"
+          placeholder="Enter product price"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Product Quantity</label>
+        <input
+          type="number"
+          required
+          class="form-control"
+          formControlName="quantity"
+          placeholder="Enter product quantity"
+        />
+      </div>
+
+      <div class="col-md-6">
+        <label for="" class="form-label">Color</label>
+        <select
+          class="form-select"
+          required
+          aria-label="Default select example"
+          formControlName="colorId"
+        >
+          <option *ngFor="let y of listColor" [value]="y.id">
+            {{ y.color_name }}
+          </option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="" class="form-label">Category</label>
+        <select
+          class="form-select"
+          required
+          aria-label="Default select example"
+          formControlName="categoryId"
+        >
+          <option *ngFor="let y of listCategory" [value]="y.id">
+            {{ y.category_Name }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <br />
+    <div class="mb-3">
+      <label class="form-label">Product Image</label>
+      <input type="file" class="form-control" formControlName="image" />
+    </div>
+    <br />
+    <button type="submit" mat-raised-button color="warn">Update</button>
+  </form>
+</div>

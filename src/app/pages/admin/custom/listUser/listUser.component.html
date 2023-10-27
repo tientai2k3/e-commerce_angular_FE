@@ -1,0 +1,118 @@
+<!-- <div class="container">
+  <div class="d-flex justify-content-between align-items-center">
+    <h2>Manage Product</h2>
+    <a routerLink="/admin/users/add" mat-fab><mat-icon>add_circle</mat-icon></a>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">.No</th>
+        <th scope="col">UserName</th>
+        <!-- <th scope="col">Password</th> -->
+<!-- <th scope="col">Full Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col" colspan="2">Active</th> -->
+<!-- </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of listUser; let i = index">
+        <th scope="row">{{ i }}</th>
+        <td>{{ x.userName }}</td>
+        <!-- <td>{{ x.password }}</td> -->
+<!-- <td>{{ x.fullName }}</td>
+        <td>{{ x.address }}</td>
+        <td>{{ x.email }}</td>
+        <td>{{ x.phone_Number }}</td> -->
+<!-- <td>
+          <button (click)="remove(x.id)" type="button" mat-fab>
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+        <td>
+          <a routerLink="/admin/users/{{ x.id }}" mat-fab>
+            <mat-icon>edit</mat-icon></a
+          >
+        </td> -->
+<!-- </tr>
+    </tbody>
+  </table>
+  <br />
+  <button
+    mat-raised-button
+    color="primary"
+    style="float: right"
+    (click)="export()"
+  >
+    Excel Excel
+  </button>
+</div>  -->
+
+<p-table
+  #dt
+  [value]="listUser"
+  [rows]="6"
+  [paginator]="true"
+  [globalFilterFields]="['fullName', 'userName']"
+  [tableStyle]="{ 'min-width': '75rem' }"
+  [rowHover]="true"
+  dataKey="id"
+  currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+  [showCurrentPageReport]="true"
+>
+  <ng-template pTemplate="caption">
+    <div class="flex align-items-center justify-content-between">
+      <h5 class="m-0">Manage Products</h5>
+      <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <input
+          pInputText
+          type="text"
+          (input)="dt.filterGlobal($any($event.target).value, 'contains')"
+          placeholder="Tìm kiếm"
+        />`
+      </span>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="header">
+    <tr>
+      <th pSortableColumn="userName">
+        User Name <p-sortIcon field="userName"></p-sortIcon>
+      </th>
+      <th pSortableColumn="fullName">
+        Full Name <p-sortIcon field="fullName"></p-sortIcon>
+      </th>
+      <th>Address</th>
+      <th>email</th>
+      <th>Phone Number</th>
+      <th>Action</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-x>
+    <tr>
+      <td>{{ x.userName }}</td>
+      <td>{{ x.fullName }}</td>
+      <td>{{ x.address }}</td>
+      <td>{{ x.email }}</td>
+      <td>{{ x.phone_Number }}</td>
+      <td>
+        <button (click)="remove(x.id)" type="button" mat-fab>
+          <mat-icon>delete</mat-icon>
+        </button>
+        <a routerLink="/admin/products/{{ x.id }}" mat-fab>
+          <mat-icon>edit</mat-icon></a
+        >
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+<br />
+<button
+  mat-raised-button
+  color="primary"
+  style="float: right"
+  (click)="export()"
+>
+  Excel Excel
+</button>

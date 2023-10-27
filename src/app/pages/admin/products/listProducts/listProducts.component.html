@@ -1,0 +1,130 @@
+<!-- <div class="container">
+  <div class="d-flex justify-content-between align-items-center">
+    <h2>Manage Product</h2>
+    <a routerLink="/admin/products/add" mat-fab
+      ><mat-icon>add_circle</mat-icon></a
+    >
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Product Code</th>
+        <th scope="col">Image</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Date Created</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Color</th>
+        <th scope="col">Category</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of listProduct">
+        <th scope="row">{{ x.product_Code }}</th>
+        <td style="width: 12%"><img src="{{ x.image }}" alt="" /></td>
+        <td>{{ x.product_Name }}</td>
+        <td>{{ x.description | slice : 0 : 50 }}...</td>
+        <td>{{ x.created_At }}</td>
+        <td>{{ x.price | currency : "VND" }}</td>
+        <td>{{ x.quantity }}</td>
+        <td>{{ x.color.color_name }}</td>
+        <td>{{ x.category.category_Name }}</td>
+        <td>
+          <button (click)="remove(x.id)" type="button" mat-fab>
+            <mat-icon>delete</mat-icon>
+          </button>
+          <a routerLink="/admin/products/{{ x.id }}" mat-fab>
+            <mat-icon>edit</mat-icon></a
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  <button
+    mat-raised-button
+    color="primary"
+    style="float: right"
+    (click)="export()"
+  >
+    Excel Excel
+  </button>
+</div> -->
+
+<p-table
+  #dt
+  [value]="listProduct"
+  [rows]="6"
+  [paginator]="true"
+  [globalFilterFields]="['product_Name', 'product_Code']"
+  [tableStyle]="{ 'min-width': '75rem' }"
+  [rowHover]="true"
+  dataKey="id"
+  currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+  [showCurrentPageReport]="true"
+>
+  <ng-template pTemplate="caption">
+    <div class="flex align-items-center justify-content-between">
+      <h5 class="m-0">Manage Products</h5>
+      <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <input
+          pInputText
+          type="text"
+          (input)="dt.filterGlobal($any($event.target).value, 'contains')"
+          placeholder="Tìm kiếm"
+        />`
+      </span>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="header">
+    <tr>
+      <th pSortableColumn="product_Code">
+        Product Code <p-sortIcon field="product_Code"></p-sortIcon>
+      </th>
+      <th>Image</th>
+      <th pSortableColumn="price">
+        Product Name <p-sortIcon field="price"></p-sortIcon>
+      </th>
+      <th>Description</th>
+      <th>Date Created</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Color</th>
+      <th>Category</th>
+      <th>Action</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-x>
+    <tr>
+      <td>{{ x.product_Code }}</td>
+      <td style="width: 12%"><img [src]="x.image" alt="" /></td>
+      <td>{{ x.product_Name }}</td>
+      <td>{{ x.description | slice : 0 : 40 }}</td>
+      <td>{{ x.created_At }}</td>
+      <td>{{ x.price | currency : "VND" }}</td>
+      <td>{{ x.quantity }}</td>
+      <td>{{ x.color.color_name }}</td>
+      <td>{{ x.category.category_Name }}</td>
+      <td>
+        <button (click)="remove(x.id)" type="button" mat-fab>
+          <mat-icon>delete</mat-icon>
+        </button>
+        <a routerLink="/admin/products/{{ x.id }}" mat-fab>
+          <mat-icon>edit</mat-icon></a
+        >
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+<br />
+<button
+  mat-raised-button
+  color="primary"
+  style="float: right"
+  (click)="export()"
+>
+  Excel Excel
+</button>

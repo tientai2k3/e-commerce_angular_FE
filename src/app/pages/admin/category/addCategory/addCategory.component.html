@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Thêm thể loại</h2>
+  <br />
+  <form class="example-form" [formGroup]="formCategory" (submit)="save()">
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input
+        matInput
+        formControlName="category_Name"
+        placeholder="Enter color name"
+      />
+    </mat-form-field>
+    <br />
+    <button
+      type="submit"
+      [disabled]="!formCategory.valid"
+      mat-raised-button
+      color="warn"
+    >
+      Save
+    </button>
+  </form>
+</div>

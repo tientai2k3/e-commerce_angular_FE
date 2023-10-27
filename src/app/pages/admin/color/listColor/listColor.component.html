@@ -1,0 +1,62 @@
+<!-- <div class="container">
+  <div class="d-flex justify-content-between align-items-center">
+    <h2>Quản lý màu sắc</h2>
+    <a routerLink="/admin/color/add" mat-fab><mat-icon>add_circle</mat-icon></a>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Tên</th>
+        <th scope="col">Hành động</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of colorList">
+        <th scope="row">{{ x.id }}</th>
+        <td>{{ x.color_name }}</td>
+        <td>
+          <button
+            (click)="removeColor(x.id)"
+            type="button"
+            mat-flat-button
+            color="accent"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+          <a
+            routerLink="/admin/color/{{ x.id }}"
+            mat-flat-button
+            color="accent"
+          >
+            <mat-icon>edit</mat-icon></a
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+<h2>Color</h2>
+<p-table [value]="colorList" [rows]="3" [paginator]="true">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Action</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-x>
+    <tr>
+      <td>{{ x.id }}</td>
+      <td>{{ x.color_name }}</td>
+      <td>
+        <button (click)="removeColor(x.id)" type="button" mat-fab color="warn">
+          <mat-icon>delete</mat-icon>
+        </button>
+        <a routerLink="/admin/color/{{ x.id }}" mat-fab color="warn">
+          <mat-icon>edit</mat-icon></a
+        >
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
