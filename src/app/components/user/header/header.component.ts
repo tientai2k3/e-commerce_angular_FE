@@ -30,8 +30,9 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     const id = this.storageService.getUser().id;
-    this.cartService.getAllByUser(id).subscribe((data) => {
-      this.listSize = data.length;
+    this.cartService.getAllByUser(id).subscribe((data) => {});
+    this.cartService.cartSize$.subscribe((size) => {
+      this.listSize = size;
     });
   }
   logout() {

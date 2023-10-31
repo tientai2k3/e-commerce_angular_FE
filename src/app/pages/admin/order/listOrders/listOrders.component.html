@@ -1,3 +1,63 @@
-<p>
-  listOrders works!
-</p>
+<br />
+<div class="col-md-12">
+  <!-- Invoices -->
+  <div>
+    <div class="dashboard-list-box invoices with-icons margin-top-20">
+      <h4>Order</h4>
+      <ul>
+        <div *ngFor="let x of orderList">
+          <li>
+            <i class="list-box-icon sl sl-icon-doc"></i>
+            <strong>Mã hóa đơn {{ x.id }}</strong>
+            <h3 style="margin: 0">Người đặt :{{ x.fullname }}</h3>
+            <span> Tình trạng:</span>
+            <ul>
+              <li>Số điện thoại: {{ x.phone }}</li>
+              <li>Địa chỉ: {{ x.address }}</li>
+              <li>Ngày đặt {{ x.booking_Date }}</li>
+              <!--
+              <h4>Tổng tiền {{ calculateTotal() | currency : "VND" }}</h4> -->
+            </ul>
+            <div class="buttons-to-right">
+              <a routerLink="/admin/order/{{ x.id }}" class="button gray"
+                >View Invoice</a
+              >
+            </div>
+          </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>
+<br />
+
+<div class="col-md-12">
+  <div class="pagination-container margin-top-20 margin-bottom-40">
+    <nav class="pagination" style="justify-content: center">
+      <ul>
+        <li>
+          <a
+            class="paging-item"
+            *ngIf="getNumber > 0"
+            (click)="loadData(getNumber - 1)"
+          >
+            <
+          </a>
+        </li>
+        <li>
+          <a class="paging-item" href="">{{ getNumber }}</a>
+        </li>
+        <li>
+          <a
+            class="paging-item"
+            *ngIf="getNumber <= getTotalPages - 1"
+            (click)="loadData(getNumber + 1)"
+          >
+            >
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<br />

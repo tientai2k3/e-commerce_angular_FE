@@ -1,0 +1,241 @@
+.dashboard-list-box {
+  margin: 30px 0 0 0;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+}
+
+/* Button */
+.dashboard-list-box .button {
+  padding: 6px 15px;
+  line-height: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.dashboard-list-box .button.gray:before {
+  display: none;
+}
+.dashboard-list-box .button.gray {
+  background-color: #e9e9e9;
+  color: #666;
+}
+
+.dashboard-list-box .button.gray:hover {
+  background-color: #66676b;
+  color: #fff;
+}
+
+.dashboard-list-box h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  padding: 25px 30px;
+  color: #333;
+  background-color: #fff;
+  display: block;
+  border-bottom: 1px solid #eaeaea;
+  border-radius: 4px 4px 0 0;
+}
+
+.dashboard-list-box h4.gray {
+  background-color: #fbfbfb;
+}
+
+.dashboard-list-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  border-radius: 0 0 4px 4px;
+}
+
+.dashboard-list-box ul li {
+  padding: 23px 30px;
+  border-bottom: 1px solid #eaeaea;
+  transition: 0.3s;
+  position: relative;
+}
+
+/*.dashboard-list-box ul li:nth(2n+1) {
+	background-color: #fcfcfc
+}*/
+
+.dashboard-list-box.with-icons ul li {
+  padding-left: 87px;
+}
+
+.dashboard-list-box ul li:last-child {
+  border: none;
+}
+
+.dashboard-list-box ul li:hover {
+  background-color: #fbfbfb;
+}
+.dashboard-list-box .numerical-rating {
+  margin: 0 3px;
+}
+
+.dashboard-list-box ul li i.list-box-icon {
+  height: 38px;
+  width: 38px;
+  color: #777;
+  text-align: center;
+  line-height: 37px;
+  border-radius: 50%;
+  transition: 0.3s;
+  display: inline-block;
+  background-color: #eee;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 30px;
+}
+
+.dashboard-list-box ul li:hover i.list-box-icon {
+  background-color: #eaeaea;
+}
+
+/* Static Content */
+.dashboard-list-box-static {
+  padding: 30px;
+  background-color: #fff;
+}
+
+.dashboard-list-box-static .button {
+  padding: 12px 20px;
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+/* Close List Item */
+a.close-list-item {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  opacity: 0;
+  padding: 4px;
+  color: #ea2828;
+  transition: 0.3s;
+}
+
+.dashboard-list-box ul li:hover a.close-list-item {
+  opacity: 1;
+}
+
+/* Reset for child ul  */
+.dashboard-list-box ul ul {
+  background-color: transparent;
+}
+
+.dashboard-list-box ul ul li:nth-last-child(2n + 1) {
+  background-color: transparent;
+}
+.dashboard-list-box ul ul li {
+  padding: 0;
+  border: none;
+  transition: 0.3s;
+  background-color: transparent;
+  display: inline-block;
+}
+
+.dashboard-list-box ul ul li:hover {
+  background-color: transparent;
+}
+
+/* Sorting */
+.dashboard-list-box .sort-by {
+  top: 16px;
+  right: 26px;
+}
+
+.dashboard-list-box .sort-by .chosen-container-single .chosen-single {
+  background-color: transparent;
+  padding: 0 4px;
+}
+.dashboard-list-box .chosen-container .chosen-results li {
+  border: none;
+}
+
+/* Invoices
+------------------------------------- */
+.dashboard-list-box.invoices li {
+  padding: 20px 30px;
+}
+.dashboard-list-box.invoices ul li strong {
+  color: #333;
+}
+
+.dashboard-list-box.invoices ul ul {
+  line-height: 22px;
+  padding-bottom: 2px;
+  color: #909090;
+}
+
+.dashboard-list-box.invoices ul ul li {
+  padding: 0;
+}
+
+.dashboard-list-box.invoices ul ul li:after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 11px;
+  background-color: #e0e0e0;
+  position: relative;
+  margin: 0 10px;
+}
+
+.dashboard-list-box.invoices ul ul li:last-child:after {
+  display: none;
+}
+
+.paid {
+  color: #64bc36;
+}
+.unpaid {
+  color: #ee3535;
+}
+
+/* Button to right */
+.buttons-to-right,
+.dashboard-list-box .button.to-right {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translate3d(0, -49%, 0);
+  -moz-transform: translate3d(0, -50%, 0);
+  opacity: 0;
+  transition: 0.4s;
+  box-shadow: 0px 0px 10px 15px #fbfbfb;
+}
+
+.dashboard-list-box li:hover .buttons-to-right,
+.dashboard-list-box li:hover .button.to-right {
+  opacity: 1;
+}
+
+.buttons-to-right {
+  box-shadow: none;
+}
+.buttons-to-right .button {
+  margin-left: 2px;
+}
+
+.dashboard-list-box .button i {
+  padding-right: 2px;
+  position: relative;
+  top: 1px;
+}
+.dashboard-list-box .button i.fa-remove {
+  padding-right: 1px;
+}
+
+/* Booking Buttons */
+.buttons-to-right a.button.approve:hover {
+  background-color: #64bc36;
+}
+.buttons-to-right a.button.reject:hover {
+  background-color: #e42929;
+}

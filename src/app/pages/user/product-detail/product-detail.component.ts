@@ -30,6 +30,11 @@ export class ProductDetailComponent implements OnInit {
       console.log(data);
     });
   }
+  clearForm() {
+    this.formCart.patchValue({
+      count: '',
+    });
+  }
   save() {
     const data = this.formCart.value;
     console.log(data);
@@ -38,6 +43,7 @@ export class ProductDetailComponent implements OnInit {
         console.log(this.storageService.getUser().id);
 
         alert('Thêm vòa giỏ hàng thành công');
+        this.clearForm();
         this.router.navigate(['/shop/' + this.product.id]);
       },
       error(err) {

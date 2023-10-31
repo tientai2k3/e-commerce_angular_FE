@@ -26,6 +26,9 @@ import { EditProductsComponent } from './pages/admin/products/editProducts/editP
 import { CartComponent } from './pages/user/cart/cart.component';
 import { AuthGuardService } from './service/auth-guard.service';
 import { OrderComponent } from './pages/user/orders/order/order.component';
+import { OrderDetailComponent } from './pages/admin/order/orderDetail/orderDetail.component';
+import { MyhistoryComponent } from './pages/user/orders/myhistory/myhistory.component';
+import { OrderItemComponent } from './pages/user/orders/order-item/order-item.component';
 
 const routes: Routes = [
   {
@@ -36,6 +39,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'order', pathMatch: 'full' },
       { path: 'order', component: ListOrdersComponent },
+      { path: 'order/:id', component: OrderDetailComponent },
       { path: 'category', component: ListCategoryComponent },
       { path: 'category/add', component: AddCategoryComponent },
       { path: 'category/:id', component: EditCategoryComponent },
@@ -64,6 +68,16 @@ const routes: Routes = [
       { path: 'shop/:id', component: ProductDetailComponent },
       { path: 'about', component: AboutComponent },
       { path: 'blog', component: BlogComponent },
+      {
+        path: 'myhistory',
+        component: MyhistoryComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'myhistory/:id',
+        component: OrderItemComponent,
+        canActivate: [AuthGuardService],
+      },
       { path: 'contact', component: ContactComponent },
       {
         path: 'cart',

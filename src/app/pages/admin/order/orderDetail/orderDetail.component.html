@@ -1,0 +1,106 @@
+<div style="display: flex">
+  <a routerLink="/home" class="print-button">Về Trang Chủ</a>
+  <a href="javascript:window.print()" class="print-button">In hóa đơn</a>
+</div>
+
+<!-- Invoice -->
+<div id="invoice">
+  <!-- Header -->
+  <div class="row">
+    <div class="col-md-6">
+      <div id="logo">
+        <img src="../../../../../assets/images/logo11.png" alt="" />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <p id="details">
+        <strong>Hóa đơn: </strong><i>{{ order.id }}</i
+        ><br />
+        <strong>Ngày tạo: </strong><i>{{ order.booking_Date }}</i
+        ><br />
+        Sau 7 ngày sẽ không được trả hàng
+      </p>
+    </div>
+  </div>
+  <!-- Client & Supplier -->
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Hóa đơn</h2>
+    </div>
+
+    <div class="col-md-6">
+      <strong class="margin-bottom-5">Thông tin người gửi</strong>
+      <p>
+        TT SHOP <br />
+        Đường Trịnh Văn Bô<br />
+        Xuân Phương -Nam Từ Liêm -Hà Nội <br />
+      </p>
+    </div>
+
+    <div class="col-md-6">
+      <strong class="margin-bottom-5">Thông tin người nhận</strong>
+      <p>
+        <i>{{ order.fullname }}</i> <br />
+        <i>{{ order.phone }}</i> <br />
+        <i>{{ order.address }}</i>
+        <br />
+      </p>
+    </div>
+  </div>
+  <!-- Invoice -->
+  <div class="row">
+    <div class="col-md-12">
+      <table class="margin-top-20">
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+        <tr *ngFor="let x of order_item">
+          <td>{{ x.product.product_Name }}</td>
+          <td>{{ x.product.price | currency : "VND" }}</td>
+          <td>{{ x.product.quantity }}</td>
+          <td>
+            {{ x.product.price * x.product.quantity | currency : "VND" }}
+          </td>
+        </tr>
+      </table>
+
+      <p>
+        <strong class="margin-bottom-5">Phương thức thanh toán: </strong>
+        <i Thanh toán></i>
+      </p>
+      <p>
+        <strong class="margin-bottom-5">Trạng thái: </strong>
+        <!-- <i
+          th:if="${hd.ngayThanhToan !=null}"
+          th:text="${'Thanh toán lúc '+#temporals.format(hd.ngayThanhToan, 'dd-MM-yyyy HH:mm:ss')}"
+        ></i>
+        <i th:if="${hd.ngayThanhToan ==null}">Chưa thanh toán</i> -->
+      </p>
+    </div>
+
+    <div class="col-md-4 col-md-offset-8">
+      <table id="totals">
+        <tr>
+          <th>Tổng tiền</th>
+          <th>
+            <span>{{ calculateTotal() | currency : "VND" }}</span>
+          </th>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="row">
+    <div class="col-md-12">
+      <ul id="footer">
+        <li><span>www.ttshop.cf</span></li>
+        <li>tientai1910@gmail.com</li>
+        <li>0972 758 663</li>
+      </ul>
+    </div>
+  </div>
+</div>

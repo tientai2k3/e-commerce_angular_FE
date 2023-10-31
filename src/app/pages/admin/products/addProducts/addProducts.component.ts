@@ -80,15 +80,14 @@ export class AddProductsComponent implements OnInit {
 
   save() {
     if (this.image) {
-      this.service.addImage(this.image).subscribe((data) => {
-        this.formProducts.patchValue({
-          image: data,
-        });
-      });
       const productData = this.formProducts.value;
 
       this.service.add(productData).subscribe({
-        next: () => {
+        next: (data) => {
+          console.log(data.id);
+          this.service.addImage(data.id, this.image).subscribe((res) => {
+            console.log(res);
+          });
           console.log(productData);
 
           alert('Thêm thành công');

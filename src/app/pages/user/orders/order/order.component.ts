@@ -46,7 +46,6 @@ export class OrderComponent implements OnInit {
 
   save() {
     const extraData = {
-      total: this.totalAmount,
       idUser: this.storageService.getUser().id,
     };
     const dataToSave = {
@@ -57,7 +56,7 @@ export class OrderComponent implements OnInit {
     this.orderService.add(dataToSave).subscribe({
       next: () => {
         alert('Đặt hàng thành công');
-        this.router.navigate(['/home']);
+        this.router.navigate(['/cart']);
       },
       error(err) {
         console.log(err);

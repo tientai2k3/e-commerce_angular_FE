@@ -48,7 +48,6 @@ import { EditColorComponent } from './pages/admin/color/editColor/editColor.comp
 import { AddUserComponent } from './pages/admin/custom/addUser/addUser.component';
 import { EditUserComponent } from './pages/admin/custom/editUser/editUser.component';
 import { ListUserComponent } from './pages/admin/custom/listUser/listUser.component';
-import { ListOrdersComponent } from './pages/admin/order/listOrders/listOrders.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MessagesModule } from 'primeng/messages';
 import { TableModule } from 'primeng/table';
@@ -57,6 +56,11 @@ import { PaginatorModule } from 'primeng/paginator';
 import { CustomInterceptor } from './util/request.service';
 import { BadgeModule } from 'primeng/badge';
 import { OrderComponent } from './pages/user/orders/order/order.component';
+import { ListOrdersComponent } from './pages/admin/order/listOrders/listOrders.component';
+import { OrderDetailComponent } from './pages/admin/order/orderDetail/orderDetail.component';
+import { MyhistoryComponent } from './pages/user/orders/myhistory/myhistory.component';
+import { OrderItemComponent } from './pages/user/orders/order-item/order-item.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -91,7 +95,9 @@ import { OrderComponent } from './pages/user/orders/order/order.component';
     EditProductsComponent,
     ListProductsComponent,
     OrderComponent,
-    ListOrdersComponent,
+    OrderDetailComponent,
+    MyhistoryComponent,
+    OrderItemComponent,
   ],
   imports: [
     BrowserModule,

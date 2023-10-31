@@ -27,10 +27,10 @@ export class ProductsService {
   add(product: any) {
     return this.http.post<any>(`${this.productAPI}/add`, product);
   }
-  addImage(image: any) {
+  addImage(id: any, image: any) {
     const formData = new FormData();
     formData.append('multipartFile', image);
-    return this.http.post<any>(`${this.productAPI}/addImage`, formData);
+    return this.http.post<any>(`${this.productAPI}/addImage/${id}`, formData);
   }
 
   update(id: any, product: any): Observable<any> {
